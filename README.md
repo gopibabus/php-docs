@@ -1,13 +1,16 @@
 <p align="center">
-  <img alt="Technology" width="400px" src="/assets/images/tech.png" />
+  <img alt="Technology" width="=400px" src="/assets/images/tech.png" />
 </p>
-<h2 align="center">Record, Replay, and memorize Technology</h2>
+<h2 align="center">Learn and memorize PHP in a easy way😉</h2>
 
 ---
 
-## Why Technology?
+## Why PHP?
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cursus eget nunc scelerisque viverra mauris in aliquam sem. Sit amet est placerat in. Sit amet est placerat in egestas erat imperdiet. Elit at imperdiet dui accumsan sit amet nulla facilisi morbi. Egestas erat imperdiet sed euismod nisi. 
+Basically, anything that you want to do on a web server, you can do with PHP. Make a blog? Yep. Create a full fledged software-as-a-serivce application? Absolutely. Write a little script to process some data in a few seconds? PHP is great for that. Write a complicated set of scripts that accidentally becomes a successful software business? PHP is used like that a lot.
 
-- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
-- Sit amet est placerat in. Sit amet est placerat in egestas erat imperdiet. 
+The PHP website lists the following uses:
+
+- Server-side scripting
+- Command-line scripting
+- Writing desktop applications
