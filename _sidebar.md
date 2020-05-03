@@ -19,6 +19,10 @@
   - [Traits](traits/traits.md)
   - [Autoloading](autoloading/autoloading.md)
 
+- Advanced
+
+  - [i18n](advanced/i18n.md)
+
 - Programming Principles
 
   - [S.O.L.I.D](programming_principles/solid.md)
