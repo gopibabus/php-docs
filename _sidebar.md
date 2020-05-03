@@ -22,6 +22,8 @@
 - Advanced
 
   - [i18n](advanced/i18n.md)
+  - [Sending Emails](advanced/emails.md)
+  - [M-V-C](advanced/mvc.md)
 
 - Programming Principles
 
