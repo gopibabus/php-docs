@@ -14,10 +14,13 @@
   - [Polymorphism](polymorphism/polymorphism.md)
   - [Data Encapsulation](classes/encapsulation.md)
   - [Magic Methods](magic_methods/magic.md)
-  - [Type Hinting](new_php/type_hinting.md)
   - [Dependency Injection](new_php/dependency_injection.md)
   - [Traits](traits/traits.md)
   - [Autoloading](autoloading/autoloading.md)
+
+- New in PHP
+
+  - [Type Hinting](new_php/type_hinting.md)
 
 - Advanced
 
