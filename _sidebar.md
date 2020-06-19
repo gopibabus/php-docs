@@ -1,10 +1,11 @@
-- PHP Development Timeline
+- Basics
 
-  - [PHP Timeline](new_php/timeline.md)
+  - [PHP Timeline](basics/timeline.md)
+  - [PHP Handlers](basics/handlers.md)
 
-- OOPs Basics
+- Intermediate
 
-  - [Introduction](classes/oops.md)
+  - [OOPs Intro](classes/oops.md)
   - [Class](classes/class.md)
   - [Properties & Methods](classes/properties.md)
   - [Objects](classes/object.md)
@@ -12,9 +13,6 @@
   - [Inheritance](inheritance/inheritance.md)
   - [Interfaces](interfaces/interfaces.md)
   - [Static Methods & Properties](classes/static.md)
-
-- OOPs Intermediate
-
   - [Polymorphism](polymorphism/polymorphism.md)
   - [Data Encapsulation](classes/encapsulation.md)
   - [Magic Methods](magic_methods/magic.md)
