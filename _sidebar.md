@@ -1,10 +1,13 @@
 - Basics
 
+  - [PHP Intro](basics/intro.md)
   - [PHP Timeline](basics/timeline.md)
   - [PHP Handlers](basics/handlers.md)
 
 - Intermediate
 
+  - [OOPs Intro](classes/oops.md)
+  - [OOPs Intro](classes/oops.md)
   - [OOPs Intro](classes/oops.md)
   - [Class](classes/class.md)
   - [Properties & Methods](classes/properties.md)
