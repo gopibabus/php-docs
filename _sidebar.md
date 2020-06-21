@@ -25,6 +25,7 @@
 
 - New in PHP
 
+  - [PHP 5 vs PHP 7](new_php/php5_7.md)
   - [Type Hinting](new_php/type_hinting.md)
 
 - Advanced
