@@ -41,6 +41,7 @@
 - PHP Ecosystem
 
   - [Frameworks](frameworks/index.md)
+  - [CodeIgniter](frameworks/codeigniter.md)
 
 - Snippets & Questions
 

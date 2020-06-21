@@ -14,6 +14,14 @@
 
 > [Codeigniter](https://codeigniter.com/)
 
+## ⚡Micro Frameworks
+
+> [Lumen](https://lumen.laravel.com/)
+
+> [Silex](https://silex.symfony.com/)
+
+> [Slim](http://www.slimframework.com/)
+
 ## ⚡CMS
 
 > [Wordpress](https://wordpress.org/)
