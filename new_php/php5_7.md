@@ -1,5 +1,7 @@
 # 🔥PHP 5 vs PHP 7
 
+> [🌐 Reference](https://www.stitcher.io/)
+
 <img src="./assets/images/php5v7.png" alt="php" width="700"/>
 
 Following are major differences, when we compare PHP 7 with PHP 5
@@ -193,3 +195,35 @@ $formattedNumber = 107_925_284.88;
 ### ✳Preloading
 * If you're using a framework, its files have to be loaded and linked on every request. Preloading allows the server to load PHP files in memory on startup, and have them permanently available to all subsequent requests.
 * If the source of preloaded files are changed, the server has to be restarted.
+
+### ✳libsodium
+* Introduced in PHP 7.2
+* The Sodium crypto library (libsodium) is a modern, easy-to-use software library for encryption, decryption, signatures, password hashing and more.
+
+```php
+$msg = 'This is a super secret message!';
+
+// Generating an encryption key and a nonce
+$key   = random_bytes(SODIUM_CRYPTO_SECRETBOX_KEYBYTES); // 256 bit
+$nonce = random_bytes(SODIUM_CRYPTO_SECRETBOX_NONCEBYTES); // 24 bytes
+
+// Encrypt
+$ciphertext = sodium_crypto_secretbox($msg, $nonce, $key);
+// Decrypt
+$plaintext = sodium_crypto_secretbox_open($ciphertext, $nonce, $key);
+
+echo $plaintext === $msg ? 'Success' : 'Error';
+```
+
+```php
+$msg = 'This is the message to authenticate!';
+$key = random_bytes(SODIUM_CRYPTO_SECRETBOX_KEYBYTES); // 256 bit
+
+// Generate the Message Authentication Code
+$mac = sodium_crypto_auth($msg, $key);
+
+// Altering $mac or $msg, verification will fail
+echo sodium_crypto_auth_verify($mac, $msg, $key) ? 'Success' : 'Error';
+```
+
+> [🌐 Reference](https://www.zend.com/blog/libsodium-and-php-encrypt)
