@@ -4,6 +4,8 @@
 
 ?> PHP is an **multi threaded**, **synchronous** programming language.
 
+?> **SAPI** stands for "Server API". It is the mechanism that controls the interaction between the "outside world" and the PHP/Zend engine. So, you would always want to use it. In fact, you cannot avoid using it without a lot of effort since even **CLI is considered a SAPI**.
+
 ### ✳Compiled vs Interpreted Programming Languages
 
 <img src="./assets/images/compliervsinterpreter.png" alt="compliervsinterpreter" width="650" height="400"/>
