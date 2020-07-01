@@ -2,18 +2,55 @@
 
 /* Hide php tag in code block */
 #main > pre::after {
-  display: none;
-} 
-#main > pre, #main > pre > code {
-  background-color: #2e2e2e; 
+	display: none;
+}
+#main > pre,
+#main > pre > code {
+	background-color: #2e2e2e;
+	font-size: 14px;
 }
 #main > pre > code {
-  color: white;
+	color: white;
+	font-size: 14px;
 }
-.sidebar, .sidebar-toggle {
-  background-color: rgb(228, 228, 228);
+
+.sidebar,
+.sidebar-toggle {
+	background-color: rgb(228, 228, 228);
 }
 
 strong {
-  color: red!important;
+	color: red !important;
+}
+
+span.scroll-to-top {
+	background: red !important;
+	color: white !important;
+}
+
+/* Table Styles */
+th {
+	background-color: #0b6e84;
+	color: #fff;
+	word-spacing: 8px;
+}
+td {
+	word-spacing: 1px;
+}
+td + td {
+	background-color: #2e2e2e;
+	color: #fff;
+	word-spacing: 4px;
+}
+
+td + td + td + td {
+	background-color: #2e2e2e;
+	color: #fff;
+	word-spacing: 4px;
+}
+
+td + td + td {
+	background-color: #fff;
+	color: #333;
+	word-spacing: 4px;
 }

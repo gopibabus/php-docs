@@ -1,10 +1,14 @@
 - Basics
 
-  - [PHP Intro](basics/intro.md)
-  - [PHP Timeline](basics/timeline.md)
-  - [PHP Handlers](basics/handlers.md)
+  - [Intro](basics/intro.md)
+  - [Timeline](basics/timeline.md)
+  - [Handlers](basics/handlers.md)
+  - [Variables & Constants](basics/basics.md)
+  - [Constructs](basics/functions.md)
+  - [Operators](basics/operators.md)
+  - [Control Structures](basics/control.md)
 
-- Intermediate
+* Intermediate
 
   - [OOPs Intro](classes/oops.md)
   - [OOPs Intro](classes/oops.md)
@@ -23,38 +27,38 @@
   - [Traits](traits/traits.md)
   - [Autoloading](autoloading/autoloading.md)
 
-- New in PHP
+* New in PHP
 
   - [PHP 5 vs PHP 7](new_php/php5_7.md)
   - [Type Hinting](new_php/type_hinting.md)
 
-- Advanced
+* Advanced
 
   - [i18n](advanced/i18n.md)
   - [Sending Emails](advanced/emails.md)
   - [M-V-C](advanced/mvc.md)
 
-- Programming Principles
+* Programming Principles
 
   - [S.O.L.I.D](programming_principles/solid.md)
 
-- PHP Ecosystem
+* PHP Ecosystem
 
   - [Frameworks](frameworks/index.md)
   - [CodeIgniter](frameworks/codeigniter.md)
 
-- Snippets & Questions
+* Snippets & Questions
 
   - [questions](qa/questions.md)
   - [snippets](qa/snippets.md)
 
-- Libraries & Resources
+* Libraries & Resources
 
   - [Libraries](libraries/intro.md)
   - [Resources](libraries/res.md)
 
-- Certifications
+* Certifications
 
   - [Exams](certifications/exams.md)
 
-- [Contributing](contribution/index.md)
+* [Contributing](contribution/index.md)
