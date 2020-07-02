@@ -53,10 +53,9 @@
   - [questions](qa/questions.md)
   - [snippets](qa/snippets.md)
 
-* Libraries & Resources
+* Other Resources
 
-  - [Libraries](libraries/intro.md)
-  - [Resources](libraries/res.md)
+  - [Resources](resources/res.md)
 
 * Certifications
 
