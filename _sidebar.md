@@ -56,6 +56,7 @@
 * Other Resources
 
   - [Resources](resources/res.md)
+  - [Articles](resources/posts.md)
 
 * Certifications
 
