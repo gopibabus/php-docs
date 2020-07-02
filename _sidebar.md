@@ -46,6 +46,7 @@
 
   - [Frameworks](frameworks/index.md)
   - [CodeIgniter](frameworks/codeigniter.md)
+  - [Drupal](frameworks/drupal.md)
 
 * Snippets & Questions
 
