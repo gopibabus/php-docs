@@ -11,6 +11,7 @@
   - [Namespaces](basics/namespaces.md)
   - [php.ini](basics/config.md)
   - [Performance](basics/perf.md)
+  - [User Defined Functions](basics/u_functions.md)
 
 * Intermediate
 
