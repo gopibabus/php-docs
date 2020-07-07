@@ -7,6 +7,10 @@
   - [Constructs](basics/functions.md)
   - [Operators](basics/operators.md)
   - [Control Structures](basics/control.md)
+  - [Loops](basics/loops.md)
+  - [Namespaces](basics/namespaces.md)
+  - [php.ini](basics/config.md)
+  - [Performance](basics/perf.md)
 
 * Intermediate
 
