@@ -285,3 +285,136 @@ echo $glob; // Changed
 ```
 
 ### ❇Lambda & Closure
+
+?> A **lambda** in PHP is an anonymous function that can be stored as a variable. PHP lambdas and closures are implemented as objects instantiated from the Closure class. You can call **lambdas and closures** using the syntax you use for variable functions.
+
+```php
+<?php
+$lambda = function($a, $b) {
+ echo $a + $b;
+};
+echo gettype($lambda); // Object
+echo (int)is_callable($lambda); // 1
+echo get_class($lambda); // Closure
+```
+
+?> A **closure** in PHP is an anonymous function that encapsulates variables so they can be used once their original references are out of scope.
+
+```php
+
+<?php
+$string = "Hello World!";
+$closure = function() use ($string) {
+ echo $string;
+};
+$closure();
+```
+
+### ❇Early and Late Binding
+
+```php
+<?php
+$a = "some string";
+// early binding (default)
+$b = function() use ($a) {
+ echo $a;
+};
+$a = "Hello World";
+// some string
+$b();
+```
+
+```php
+
+<?php
+$a = "some string";
+// late binding (reference)
+$b = function() use (&$a) {
+ echo $a;
+};
+$a = "Hello World";
+// Hello World
+$b();
+```
+
+!> PHP will **use early binding by default**. If you want to use late binding, you should use a reference when importing.
+
+### ❇Self Executing Closures
+
+```php
+(function () {
+    echo 'Self-executing anonymous function' . PHP_EOL;
+    $definedInClosure = 'Variable set'. PHP_EOL;
+    echo $definedInClosure;
+})();
+
+var_dump(isset($definedInClosure));//False
+```
+
+### ❇Callbacks/Callables
+
+?> **Callbacks** can be denoted by callable type. Some functions like **call_user_func() or usort()** accept user-defined callback functions as a parameter.
+
+- A callable for a function can be one of the following:
+  - An inline anonymous function.
+  - A lambda or closure variable.
+  - A string denoting a PHP function (**but not language constructs**).
+  - A string denoting a user-defined function.
+  - An array containing an instance of an object in the first element, and the string name of the function to call in the second element.
+  - A string containing the name of a static method in a class.
+
+```php
+// An example callback function
+function my_callback_function() {
+    echo 'hello world!';
+}
+
+// An example callback method
+class MyClass {
+    static function myCallbackMethod() {
+        echo 'Hello World!';
+    }
+}
+
+// Type 1: Simple callback
+call_user_func('my_callback_function');
+
+// Type 2: Static class method call
+call_user_func(array('MyClass', 'myCallbackMethod'));
+
+// Type 3: Object method call
+$obj = new MyClass();
+call_user_func(array($obj, 'myCallbackMethod'));
+
+// Type 4: Static class method call (As of PHP 5.2.3)
+call_user_func('MyClass::myCallbackMethod');
+```
+
+```php
+// Type 5: Relative static class method call (As of PHP 5.3.0)
+class A {
+    public static function who() {
+        echo "A\n";
+    }
+}
+
+class B extends A {
+    public static function who() {
+        echo "B\n";
+    }
+}
+
+call_user_func(array('B', 'parent::who')); // A
+```
+
+```php
+// Type 6: Objects implementing __invoke can be used as callables (since PHP 5.3)
+class C {
+    public function __invoke($name) {
+        echo 'Hello ', $name, "\n";
+    }
+}
+
+$c = new C();
+call_user_func($c, 'PHP!');
+```

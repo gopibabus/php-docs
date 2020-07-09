@@ -15,6 +15,10 @@
 
 * Intermediate
 
+  - [Strings](strings/index.md)
+  - [String Functions](strings/str_functions.md)
+  - [Arrays](arrays/index.md)
+  - [Array Functions](arrays/array_functions.md)
   - [OOPs Intro](classes/oops.md)
   - [OOPs Intro](classes/oops.md)
   - [OOPs Intro](classes/oops.md)
