@@ -134,6 +134,21 @@ $sortDirection = $_GET['sort_dir'] ?? $defaultSortDir ?? 'ASC';
 $sortDirection = $_GET['sort_dir'] ?: 'ASC';
 ```
 
+### ❇Coalescing Assign Operator
+
+```php
+<?php
+
+//PHP < 7
+$data['key'] = isset($data['key']) ? $data['key'] : 'some_default';
+
+//PHP 7.X < 7.4
+$data['key'] = $data['key'] ?? 'some_default';
+
+//PHP >= 7.4
+$data['key'] ??= 'some_default';
+```
+
 ### ❇Spaceship (<=>)
 
 | Operation              | Value |
@@ -143,3 +158,16 @@ $sortDirection = $_GET['sort_dir'] ?: 'ASC';
 | 1 <=> 2                | -1    |
 | 'apples' <=> 'Bananas' | 1     |
 | 'Apples' <=> 'bananas' | -1    |
+
+### ❇Spread Operator
+
+```php
+$arr1 = [3,4,5];
+$arr2 = [8,9,10];
+
+//Before PHP 7.4
+$superArray = array_merge([1,2], $arr1, [6,7], $arr2);
+
+//From PHP 7.4
+$superArray = [1, 2, ...$arr1, 6, 7, ...$arr2];
+```

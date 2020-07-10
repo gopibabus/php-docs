@@ -17,6 +17,17 @@ Class Car {
 }
 ```
 
+?> From PHP 7.4, class properties can be typed.
+
+```php
+<?php
+
+class BankAccount {
+    private int $id;
+    private Money $balance;
+}
+```
+
 **Functions** inside Class are called as **Methods**.
 
 Methods helps to perform some action in the Class.

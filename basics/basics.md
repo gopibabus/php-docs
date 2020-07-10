@@ -134,3 +134,16 @@ define(MOLE, 'hill');
 | \_\_FUNCTION\_\_  | The name of the function being executed                                          |
 | \_\_TRAIT\_\_     | The namespace and name of the trait that the code is running in                  |
 | \_\_NAMESPACE\_\_ | The current namespace                                                            |
+
+### ❇Numeric Literal Separator
+
+?> **Numeric literal separator** functionality makes it possible for you to improve code readability by adding underscores between digits in numeric literals. This really helps reading large numbers like 100 million, one billion, etc.
+
+```php
+
+//Before PHP 7.4
+$threshold = 1000000000;
+
+//With PHP 7.4
+$threshold = 1_000_000_000;
+```

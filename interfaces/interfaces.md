@@ -88,6 +88,37 @@ class ConstructCar {
 }
 ```
 
+### ❇Covariant Returns and Contravariant Parameter
+
+?> Introduced in PHP 7.4
+
+```php
+<?php
+
+interface Factory {
+    public function make(): object;
+}
+
+//example of a covariant return
+class UserFactory implements Factory {
+    public function make(): User;
+}
+```
+
+```php
+<?php
+
+interface Concatable {
+    public function concat(Iterator $input);
+}
+
+//example of contravariant parameters:
+class Collection implements Concatable {
+    // accepts all iterables, not just Iterator
+    public function concat(iterable $input) {/* . . . */}
+}
+```
+
 ## What are Abstract classes and Methods?
 
 Class that we do not want to create object are defined as **Abstract Class**.

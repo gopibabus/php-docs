@@ -418,3 +418,39 @@ class C {
 $c = new C();
 call_user_func($c, 'PHP!');
 ```
+
+### ❇Arrow Functions
+
+- They can only have one expression.
+- “return” keyword is not allowed.
+- They can access variables in the parent scope without the “use” keyword.
+- Arguments and return types can be type-hinted.
+
+<!-- tabs:start -->
+
+#### **PHP 7.3**
+
+```php
+<?php
+
+$arr = [1,2,3,4];
+
+$new_arr = array_map(function($e) {
+    return $e * $e;
+}, $arr);
+
+print_r($new_arr); //[1,4,9,16]
+```
+
+#### **PHP 7.4**
+
+```php
+<?php
+
+$arr = [1,2,3,4];
+$new_arr = array_map(fn($e) => $e * $e, $arr);
+
+print_r($new_arr); //[1,4,9,16]
+```
+
+<!-- tabs:end -->

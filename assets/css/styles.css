@@ -23,6 +23,21 @@
 	line-height: 2;
 }
 
+div > pre,
+div > pre > code {
+	background-color: #2e2e2e !important;
+	font-family: JetBrainsMono !important;
+	font-size: 15px !important;
+	line-height: 2 !important;
+}
+
+div > pre > code {
+	color: white !important;
+	font-family: JetBrainsMono !important;
+	font-size: 15px !important;
+	line-height: 2 !important;
+}
+
 .sidebar,
 .sidebar-toggle {
 	background-color: rgb(228, 228, 228);

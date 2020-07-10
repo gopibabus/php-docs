@@ -20,8 +20,6 @@
   - [Arrays](arrays/index.md)
   - [Array Functions](arrays/array_functions.md)
   - [OOPs Intro](classes/oops.md)
-  - [OOPs Intro](classes/oops.md)
-  - [OOPs Intro](classes/oops.md)
   - [Class](classes/class.md)
   - [Properties & Methods](classes/properties.md)
   - [Objects](classes/object.md)
