@@ -48,3 +48,36 @@ if (!extension_loaded('gd')) {
  }
 }
 ```
+
+### ❇OPcache Preloading
+
+?> PHP can be configured to preload scripts into the opcache when the engine starts. Any symbols (functions, classes, etc.) in those files will then become globally available for all requests without needing to be explicitly included.
+
+!> This feature is only practical to use in production, not in a development environment.😟
+
+?> **"Preload everything"** may be the easiest strategy, but not necessarily the best strategy. **Preloading** is only useful when there is a persistent process from one request to another.
+
+> Preloading helps to load files responsible for running **PHP CLI apps**.
+
+!> Preloading is not supported on Windows.
+
+```php
+# php.ini
+opcache.preload=preload.php
+```
+
+```php
+# preload.php
+# pre loading all files from "src" directory.
+<?php
+$directory = new RecursiveDirectoryIterator(__DIR__ . '/src');
+$fullTree = new RecursiveIteratorIterator($directory);
+$phpFiles = new RegexIterator($fullTree, '/.+((?<!Test)+\.php$)/i', RecursiveRegexIterator::GET_MATCH);
+
+foreach ($phpFiles as $key => $file) {
+    require_once($file[0]);
+}
+?>
+```
+
+[🌍 Reference](https://www.php.net/manual/en/opcache.preloading.php)
