@@ -301,3 +301,7 @@ $player->gamePlay(); //Playing a game
 > [🌐 Reference 2](https://www.sitepoint.com/using-traits-in-php-5-4/)
 
 > [🌐 Reference 3](https://dev.to/mattsparks/how-to-use-php-traits-459m)
+
+!> Sample 1
+
+!> Sample 2
