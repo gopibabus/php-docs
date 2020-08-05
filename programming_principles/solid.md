@@ -23,3 +23,5 @@
 ---
 
 <img src="./assets/images/d-ip.png" alt="solid" width="700" height="400"/>
+
+?> [🌐 Reference](https://medium.com/backticks-tildes/the-s-o-l-i-d-principles-in-pictures-b34ce2f1e898)
