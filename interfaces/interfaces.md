@@ -188,3 +188,5 @@ class DBConnection extends Database {
     }
 }
 ```
+
+> [🌐 Guide To Abstraction](https://jesseduffield.com/beginners-guide-to-abstraction/)
