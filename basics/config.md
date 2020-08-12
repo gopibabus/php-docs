@@ -41,3 +41,7 @@ memory_limit = ${PHP_MEMORY_LIMIT}
 | mysql.default_host = hostname     | To connect to MySQL default server.                                                         |                   |
 | mysql.default_user = username     | To connect to MySQL default username.                                                       |                   |
 | mysql.default_password = password | To connect to MySQL default password.                                                       |                   |
+
+> [🌐 PHP.ini Directives](basics/directives.md)
+
+> [🌐 PHP.ini Config file](basics/php.ini.md)
