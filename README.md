@@ -3,6 +3,8 @@
 </p>
 <h2 align="center">Learn and memorize PHP in a easy way😉</h2>
 
+> In future this project is discontinued and it will be part of my Notion Notes.
+
 ---
 
 ## Why PHP?
