@@ -1,104 +1,391 @@
 # 🔥Array Functions
 
-### ❇Create an Array
+```php
 
-| Function     | Purpose                                                |
-| ------------ | ------------------------------------------------------ |
-| explode()    | Used to split up a string into an array.               |
-| implode()    | Joins the elements of an array together into a string. |
-| preg_split() | Splits a string into an array.                         |
-| str_split()  | Break a string into an array of chunks.                |
+<?php
+$city = [
+  'name' => 'Frankfurt',
+  'country' => 'Germany',
+  'population' => 785000,
+  'latitude' => 50.110924,
+  'longitude' => 8.682127
+];
 
-### ❇Filling up an Array
+/*
+|--------------------------------------------------------------------------
+| array_keys
+|--------------------------------------------------------------------------
+|
+| Returns all keys or a subset of keys of an array.
+|
+*/
 
-| Function          | Purpose                                                                              |
-| ----------------- | ------------------------------------------------------------------------------------ |
-| range()           | Add values to an array based on a range of values you specify.                       |
-| array_combine()   | Creates an array by using the elements from one "keys" array and one "values" array. |
-| array_fill()      | Fills an array with values.                                                          |
-| array_fill_keys() | Fills an array with values, specifying keys.                                         |
+$keys = array_keys($city);
 
-### ❇Alter an Array
+/*
+|--------------------------------------------------------------------------
+| array_values
+|--------------------------------------------------------------------------
+|
+| Return all values of an array
+|
+*/
 
-| Function        | Purpose                                              |
-| --------------- | ---------------------------------------------------- |
-| array_shift()   | Removes the first element from an array.             |
-| array_unshift() | Inserts new elements to the begining of an array.    |
-| array_pop()     | Deletes the last element of an array.                |
-| array_push()    | Inserts one or more elements to the end of an array. |
+$values = array_values($city);
 
-### ❇Comparing Arrays
+/*
+|--------------------------------------------------------------------------
+| in_array
+|--------------------------------------------------------------------------
+|
+| Check if a value exists in an array.
+|
+*/
 
-| Function                | Purpose                                                                                                                |
-| ----------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| array_diff()            | Compares the values of two (or more) arrays.                                                                           |
-| array_diff_assoc()      | Compares the keys and values of two (or more) arrays.                                                                  |
-| array_intersect()       | Compares the values of two (or more) arrays and returns the matches                                                    |
-| array_intersect_assoc() | Compares the keys and values of two (or more) arrays, and returns the matches.                                         |
-| array_udiff()           | Compares the values of two or more arrays, and returns the differences.                                                |
-| array_udiff_assoc()     | Compares the keys and values of two or more arrays, and returns the differences.                                       |
-| array_udiff_uassoc()    | Compare the keys and values of two arrays (using two user-defined functions for comparison) and return the differences |
+$in = in_array('Berlin', $city);
 
-### ❇Combining Arrays
+/*
+|--------------------------------------------------------------------------
+| array_key_exists
+|--------------------------------------------------------------------------
+|
+| Check if the given key or index exists in an array
+|
+*/
 
-| Function        | Purpose                                                                                 |
-| --------------- | --------------------------------------------------------------------------------------- |
-| array_replace() | Replace the values of the first array ($a1) with the values from the second array ($a2) |
-| array_merge()   | Merge two arrays into one array.                                                        |
+$exists = array_key_exists('longitude', $city);
 
-### ❇Splitting Arrays
+/*
+|--------------------------------------------------------------------------
+| array_search
+|--------------------------------------------------------------------------
+|
+| Searches the array for a given value and 
+| returns the first corresponding key if successful.
+|
+*/
 
-| Function       | Purpose                                                         |
-| -------------- | --------------------------------------------------------------- |
-| array_chunk()  | Split an array into chunks of two.                              |
-| array_column() | Returns the values from a single column in the input array.     |
-| array_slice()  | Returns selected parts of an array.                             |
-| array_splice() | Remove elements from an array and replace it with new elements. |
-| extract()      | Imports variables into the local symbol table from an array.    |
-| array_rand()   | Return an array of random keys.                                 |
+$key = array_search('Germany', $city);
 
-### ❇Destructing Arrays
+/*
+|--------------------------------------------------------------------------
+| array_count_values
+|--------------------------------------------------------------------------
+|
+| Counts of different values in an array.
+|
+*/
 
-| Function | Purpose                                                |
-| -------- | ------------------------------------------------------ |
-| list()   | assign values to a list of variables in one operation. |
+$numbers = [10, 10, 20, 20, 30, 30, 40];
+$valueCount = array_count_values($numbers);
 
-### ❇Calculating with Arrays
+/*
+|--------------------------------------------------------------------------
+| array_unique
+|--------------------------------------------------------------------------
+|
+| Removed duplicates and return unique values from an array. 
+| Returns original keys of values.
+|
+*/
 
-| Function             | Purpose                                                          |
-| -------------------- | ---------------------------------------------------------------- |
-| array_count_values() | Counts all the values of an array.                               |
-| array_product()      | Calculates and returns the product of values in an array.        |
-| array_sum()          | Returns the sum of all the values in the array.                  |
-| count()              | Return the number of elements in an array.                       |
-| sizeof()             | Alias of the count(). Return the number of elements in an array. |
+$unique = array_unique($numbers);
 
-### ❇Using Array Cursors
+/*
+|--------------------------------------------------------------------------
+| array_column
+|--------------------------------------------------------------------------
+|
+| Returns the values from a single column in the input array.
+|
+*/
 
-| Function  | Purpose                                                                        |
-| --------- | ------------------------------------------------------------------------------ |
-| reset()   | Moves the internal pointer to the first element of the array.                  |
-| end()     | Moves the internal pointer to, and outputs, the last element in the array.     |
-| next()    | Moves the internal pointer to, and outputs, the next element in the array.     |
-| prev()    | Moves the internal pointer to, and outputs, the previous element in the array. |
-| current() | Returns the value of the current element in an array.                          |
-| key()     | Returns the element key from the current internal pointer position..           |
+$cities = [
+  [
+    'name' => 'Frankfurt',
+    'country' => 'Germany',
+    'population' => 785000,
+    'latitude' => 50.110924,
+    'longitude' => 8.682127
+  ],
+  [
+    'name' => 'Mumbai',
+    'country' => 'India',
+    'population' => 785000,
+    'latitude' => 19.110924,
+    'longitude' => 72.682127
+  ]
+];
+$countries = array_column($cities, 'country');
 
-### ❇Walking through Arrays
+/*
+|--------------------------------------------------------------------------
+| array_unshift
+|--------------------------------------------------------------------------
+|
+| Apends elements to the begining of an array. It will mutate the array.
+|
+*/
 
-| Function     | Purpose                                            |
-| ------------ | -------------------------------------------------- |
-| array_walk() | Run each array element in a user-defined function. |
+array_unshift($countries, 'USA', 'Canada', 'Mexico');
 
-### ❇Sorting Arrays
+/*
+|--------------------------------------------------------------------------
+| array_pop
+|--------------------------------------------------------------------------
+|
+| Remove element from the end of the array. It will mutate the array.
+|
+*/
 
-| Function  | Purpose                                                                                            |
-| --------- | -------------------------------------------------------------------------------------------------- |
-| sort()    | Sorts an indexed array in ascending order.                                                         |
-| rsort()   | Sorts an indexed array in descending order.                                                        |
-| asort()   | Sorts an associative array in ascending order, according to the value.                             |
-| arsort()  | Sorts an associative array in descending order, according to the value.                            |
-| ksort()   | Sorts an associative array in descending order, according to the key.                              |
-| usort()   | Sorts an array using a user-defined comparison function..                                          |
-| shuffle() | Randomizes the order of the elements in the array. Assigns new keys for the elements in the array. |
-| natsort() | Sorts an array by using a "natural order" algorithm. The values keep their original keys.          |
+$poppedItem = array_pop($countries);
+
+/*
+|--------------------------------------------------------------------------
+| array_shift
+|--------------------------------------------------------------------------
+|
+| Remove element from the begining of the array. It will mutate the array.
+|
+*/
+
+$shiftedItem = array_shift($countries);
+
+/*
+|--------------------------------------------------------------------------
+| array_push
+|--------------------------------------------------------------------------
+|
+| Pushes elements on to the end of an array
+|
+*/
+
+array_push($countries, 'Pakisthan', 'Srilanka', 'Bangladesh');
+
+/*
+|--------------------------------------------------------------------------
+| array_diff
+|--------------------------------------------------------------------------
+|
+| Computes the difference of arrays. 
+| Returns elements present in array1 that are not in other arrays
+|
+*/
+
+$arrayOne = [1, 2, 3, 4];
+$arrayTwo = [1, 2, 4, 5, 6];
+$arrayThree = [1, 4, 5, 6, 7];
+$diff = array_diff($arrayOne, $arrayTwo, $arrayThree);
+
+/*
+|--------------------------------------------------------------------------
+| array_intersect
+|--------------------------------------------------------------------------
+|
+| Computes the common values of arrays. 
+| Returns elements commonly present in all arrays
+|
+*/
+
+$arrayOne = [1, 2, 3, 4];
+$arrayTwo = [1, 2, 4, 5, 6];
+$arrayThree = [1, 4, 5, 6, 7];
+$intersect = array_intersect($arrayOne, $arrayTwo, $arrayThree);
+
+/*
+|--------------------------------------------------------------------------
+| array_slice
+|--------------------------------------------------------------------------
+|
+| Extract a slice of the array. 
+| This function will take array starting index and length.
+|
+*/
+
+$slice = array_slice($arrayTwo, 2, 2);
+
+/*
+|--------------------------------------------------------------------------
+| range
+|--------------------------------------------------------------------------
+|
+| Create an array containing a range of elements
+|
+*/
+
+$arrayFour = range(0, 99);
+
+/*
+|--------------------------------------------------------------------------
+| array_map
+|--------------------------------------------------------------------------
+|
+| Applies the callback to every element of the array.
+|
+*/
+
+$arrayFive = array_map(function ($item) {
+  return $item ** 2;
+}, $arrayTwo);
+
+/*
+|--------------------------------------------------------------------------
+| array_filter
+|--------------------------------------------------------------------------
+|
+| Filter elements of the given array by 
+| applying a callback function on each element value.
+|
+*/
+
+$squaredFilter = array_filter($arrayFive, function ($item) {
+  return $item > 8;
+});
+# If we have to filter array elements by keys
+$cityFilter = array_filter($city, function ($item) {
+  return in_array($item, ['city', 'town', 'country']);
+}, ARRAY_FILTER_USE_KEY);
+
+/*
+|--------------------------------------------------------------------------
+| array_combine
+|--------------------------------------------------------------------------
+|
+| Creates an array by using one array for keys and 
+| another array for its values.
+|
+*/
+
+$keys = ['name', 'country', 'population', 'latitude', 'longitude'];
+$citiesArray = [
+  ['Frankfurt', 'Germany', 785000, 50.110924, 8.682127],
+  ['Mumbai', 'india', 20667659, 19.076090, 72.85269]
+];
+$keyValueCities = [];
+foreach ($citiesArray as $city) {
+  $keyValueCities[] = array_combine($keys, $city);
+}
+
+/*
+|--------------------------------------------------------------------------
+| array_merge
+|--------------------------------------------------------------------------
+|
+| Merges the elements of one or more arrays together.
+|
+*/
+
+$mergedCities = array_merge($citiesArray, [['Valencia', 'Spain', 834920, 39.52689, -0.3856987]]);
+
+/*
+|--------------------------------------------------------------------------
+| array_replace
+|--------------------------------------------------------------------------
+|
+| Replaces the values of the first array with the same values 
+| from the following arrays
+|
+*/
+
+$globalConfig = [
+  'env' => 'prod',
+  'debug' => false,
+  'db_name' => 'prod_db'
+];
+$devConfig = [
+  'env' => 'dev',
+  'debug' => true,
+  'db_name' => 'dev_db'
+];
+$localConfig = [
+  'db_name' => 'local_db'
+];
+$myConfig = array_replace($globalConfig, $devConfig, $localConfig);
+
+/*
+|--------------------------------------------------------------------------
+| array_sum
+|--------------------------------------------------------------------------
+|
+| Calculates sum of values in an array
+|
+*/
+
+$sum = array_sum([1, 2, 3, 4.5, 6, 7]);
+
+/*
+|--------------------------------------------------------------------------
+| array_product
+|--------------------------------------------------------------------------
+|
+| Product of values in an array
+|
+*/
+
+$product = array_product([1, 2, 3, 4.5]);
+
+/*
+|--------------------------------------------------------------------------
+| array_reduce
+|--------------------------------------------------------------------------
+|
+| Send values in an array to callback function to return a String
+|
+*/
+
+$animals = ['Dog', 'Cat', 'Horse'];
+$reducedString = array_reduce($animals, function($item1, $item2){
+  return "{$item1} - {$item2}";
+});
+
+/*
+|--------------------------------------------------------------------------
+| list
+|--------------------------------------------------------------------------
+|
+| Assign a list of variables in one operation
+|
+*/
+
+$values = [23, 45, 67];
+list($a, $b, $c) = $values;
+
+/*
+|--------------------------------------------------------------------------
+| explode
+|--------------------------------------------------------------------------
+|
+| Split a string into an array
+|
+*/
+
+$csvString = 'PHP,JavaScript,Python,C';
+$languageArray = explode(',', $csvString);
+
+/*
+|--------------------------------------------------------------------------
+| implode
+|--------------------------------------------------------------------------
+|
+| Join array elements into a string
+|
+*/
+
+$languageString = implode(',', $languageArray);
+
+/*
+|--------------------------------------------------------------------------
+| compact
+|--------------------------------------------------------------------------
+|
+| Create an array from variables and their values
+|
+*/
+
+$name = 'Amaravathi';
+$country = 'India';
+$state = 'Andhra Pradesh';
+$population = 35050000;
+$cityCompactArray = compact('name', 'country', 'state', 'population');
+
+```
