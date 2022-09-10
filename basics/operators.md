@@ -132,6 +132,7 @@ $sortDirection = $_GET['sort_dir'] ?? $defaultSortDir ?? 'ASC';
 
 // The Elvis operator raises E_NOTICE if the GET variable is not set
 $sortDirection = $_GET['sort_dir'] ?: 'ASC';
+
 ```
 
 ### ❇Coalescing Assign Operator
@@ -147,6 +148,29 @@ $data['key'] = $data['key'] ?? 'some_default';
 
 //PHP >= 7.4
 $data['key'] ??= 'some_default';
+```
+
+### ❇Null-safe operator
+
+?> Added in v8.0
+
+```php
+
+class User {
+  public function getPreferences() {}
+}
+class Preferences {
+  public function getColorScheme() {}
+}
+$user = new User;
+// ❌ preferences could be null
+$colorScheme = $user->getPreferences()->getColorScheme();
+// alternative
+$preferences = $user->getPreferences();
+$colorScheme = $preferences ? $preferences->getColorScheme() : null;
+// using null-safe operator
+$colorScheme = $user->getPreferences()?->getColorScheme();
+
 ```
 
 ### ❇Spaceship (<=>)

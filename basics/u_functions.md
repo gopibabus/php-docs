@@ -48,6 +48,27 @@ the type string, integer given,
 */
 ```
 
+### ❇Named Parameters
+
+?> Added in v8.0
+
+```php
+
+function enableThisConfig($optionA, $optionB, $somethingElse, $anotherOne) {
+ //
+}
+// 6 months later reading this.. ??
+enableThisConfig(true, true, false, 'DEV');
+// using named params
+enableThisConfig(
+  optionA: true,
+  optionB: true,
+  somethingElse: false,
+  anotherOne: 'DEV',
+);
+
+```
+
 ### ❇Alternate Null Type Syntax
 
 ?> PHP 7.1 introduced a new way to type hint variables that may be null.
@@ -284,7 +305,7 @@ myFunction();
 echo $glob; // Changed
 ```
 
-### ❇Lambda & Closure
+### ❇Lambda & Closure & Arrow Functions
 
 ?> A **lambda** in PHP is an anonymous function that can be stored as a variable. PHP lambdas and closures are implemented as objects instantiated from the Closure class. You can call **lambdas and closures** using the syntax you use for variable functions.
 
@@ -308,6 +329,16 @@ $closure = function() use ($string) {
  echo $string;
 };
 $closure();
+```
+
+?> A **Arrow FUnction** can't be multi-line. Added in v7.4.
+
+```php
+
+$publishedPosts = array_filter($posts,
+  fn($post) => $post->status === 'Published'
+)
+
 ```
 
 ### ❇Early and Late Binding

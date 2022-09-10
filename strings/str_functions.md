@@ -233,5 +233,18 @@ echo $newtext;
 // jumped over the lazy<br />
 // dog.
 
+/*
+|--------------------------------------------------------------------------
+| str_starts_with
+|--------------------------------------------------------------------------
+|
+| Checks if a string starts with a given substring
+|
+*/
+
+$string = 'Modern PHP';
+if (str_starts_with($string, 'Modern')) {}
+if (str_ends_with($string, 'PHP')) {}
+if (str_contains($string, 'Modern')) {}
 
 ```

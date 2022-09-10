@@ -30,7 +30,7 @@ $car1 = new Car();
 $car1->wheelCount();
 ```
 
-## What are Realtime use cases of a Contructor?
+## What are Realtime use cases of a Constructor?
 
 1. Initialize the properties of a class.
 
@@ -77,6 +77,30 @@ Class Car {
 $car1 = new Car('honda', 'pearl');
 $car1->getName();
 $car1->getColor();
+```
+
+### Constructor property promotion
+
+?> Added in v8.0
+
+```php
+
+// from this
+class User {
+  public string $name;
+  public Address $address;
+  public function __construct(string $name, Address $address) {
+    $this->name = $name;
+    $this->address = $address;
+ }
+}
+// to this
+class User {
+  public function __construct(protected string $name, protected Address $address) {
+  // nothing else needed
+  }
+}
+
 ```
 
 ## What is a Destructor?

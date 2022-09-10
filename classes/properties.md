@@ -88,6 +88,61 @@ $file2 = new Files;
 $file1->displayContent('test2.txt');
 ```
 
+?> Added in v7.0
+
+```php
+
+function getPost(int $postId): Post {
+ //
+}
+
+```
+
+**Union Types**
+
+?> Added in v8.0
+
+```php
+
+function updateTotal(int|float $cost) {
+ //
+}
+
+```
+
+
+**Null and Void return types**
+
+?> Added in v7.1
+
+```php
+
+// Notice the `?` before the type
+function getPost(int $postId): ?Post {
+ // can return null
+}
+function setPostTitle(int $postId, string $title): void {
+  persistInDB($postId, $postTitle);
+ // won't return anything, or optionally can do:
+ // `return;`
+}
+
+```
+
+**Never return type**
+
+?> Added in v8.1
+
+```php
+
+function notImplemented(): never {
+  throw new Exception('Not implemented');
+}
+
+```
+
+
+
 ## What is \$this keyword?
 
 **\$this** keyword allows us to access properties & methods of same class.

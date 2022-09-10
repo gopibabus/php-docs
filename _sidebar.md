@@ -36,6 +36,7 @@
   - [Dependency Injection](new_php/dependency_injection.md)
   - [Traits](traits/traits.md)
   - [Autoloading](autoloading/autoloading.md)
+  - [Enum](classes/enum.md)
 
 * New in PHP
 

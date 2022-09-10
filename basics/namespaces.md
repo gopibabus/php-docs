@@ -60,3 +60,18 @@ echo Formatters::asCurrency(10);
 namespace MyApp;
 throw new \Exception('Global namespace');
 ```
+
+### ❇Import grouping
+
+?> Added in v7.0
+
+```php
+
+// all in separate lines
+use App\Entity\Task;
+use App\Entity\Reminder;
+use App\Entity\Todo;
+// now
+use App\Entity\{Task, Reminder, Todo};
+
+```
