@@ -75,6 +75,26 @@ var_dump($a == $d); // true
 var_dump($a === $d); // false
 ```
 
+**Spread operator within arrays**
+
+?> Initial support for arrays in v7.4
+
+?> Support for string-keyed (associative) arrays in v8.1
+
+```php
+
+// arrays
+$userPosts = [1, 2, 3, 4, 5];
+$userPosts = [...$userPosts, 6];
+// associative arrays
+$userPosts = [
+  'id-a' => 'Published',
+  'id-b' => 'Draft',
+];
+$userPosts = [...$userPosts, 'id-c' => 'Draft'];
+
+```
+
 ### ❇Iterating through Arrays
 
 ```php
@@ -125,4 +145,24 @@ $fruitArrayObject->ksort();
 foreach ($fruitArrayObject as $key => $val) {
     echo "$key = $val\n";
 }
+```
+
+### ❇Array destructuring
+?> Added in v7.1
+
+```php
+
+// arrays
+$posts = [[1, 2, 3, 4], [5, 6, 7]];
+[$publishedPosts, $draftPosts] = $posts;
+// or skip
+[, $draftPosts] = $posts;
+// associative arrays
+$post = [
+  'title' => 'Modern PHP',
+  'description' => '...',
+  'status' => 'Published'
+];
+['title' => $title, 'description' => $description] = $post;
+
 ```
